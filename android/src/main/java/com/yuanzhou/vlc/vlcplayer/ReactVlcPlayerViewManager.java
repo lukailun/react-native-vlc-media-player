@@ -117,8 +117,7 @@ public class ReactVlcPlayerViewManager extends SimpleViewManager<ReactVlcPlayerV
 
     @ReactProp(name = PROP_SEEK)
     public void setSeek(final ReactVlcPlayerView videoView, final float seek) {
-        videoView.seekTo(Math.round(seek * 1000f));
-        //videoView.seekTo(seek);
+        videoView.setPosition(seek);
     }
 
     @ReactProp(name = PROP_AUTO_ASPECT_RATIO, defaultBoolean = false)
